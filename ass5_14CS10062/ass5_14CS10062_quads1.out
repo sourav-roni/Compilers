@@ -1,0 +1,1197 @@
+THE PARSER RULES ARE
+********************************************************************************************************************
+********************************************************************************************************************
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+external_declaration ->function_definition
+translation_unit -> external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_list COMMA parameter_declaration 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_list COMMA parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+direct_declarator -> direct_declarator LEFT_ROUND_BRACE RIGHT_ROUND_BRACE
+ declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+block_item ->declaration
+block_item_list ->block_item 
+ret
+0xa0d090
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+a
+0xa0cbb0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+a
+0xa0cbb0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> multiplicative_expression MULTIPLICATION cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+ret
+0xa0d090
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+ret
+0xa0d090
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+plus
+0xa0cdd0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+a
+0xa0cbb0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> assignment_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> argument_expression_list COMMA assignment_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> argument_expression_list COMMA assignment_expression
+postfix_expression-> postfix_expression LEFT_ROUND_BRACE argument_expression_list RIGHT_ROUND_BRACE
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+The additive has the name ..ret
+The additive has the name ..t003
+additive_expression-> additive_expression PLUS multiplicative_expression 
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+ret
+0xa0d090
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+function_definition->declaration_specifiers declarator F compound_statement
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_list COMMA parameter_declaration 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_list COMMA parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+j
+0xa0cd10
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+k
+0xa0cd50
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression ->relational_expression GREATER_THAN shift_expression
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+i
+0xa0ccb0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+j
+0xa0cd10
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+The additive has the name ..i
+The additive has the name ..j
+additive_expression-> additive_expression PLUS multiplicative_expression 
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+primary_expression-> LEFT_ROUND_BRACE expression RIGHT_ROUND_BRACE 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+statement ->compound_statement
+i
+0xa0ccb0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+k
+0xa0cd50
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+The additive has the name ..i
+The additive has the name ..k
+additive_expression-> additive_expression PLUS multiplicative_expression 
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+primary_expression-> LEFT_ROUND_BRACE expression RIGHT_ROUND_BRACE 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+statement ->compound_statement
+selection_statement ->IF_KEYWORD LEFT_ROUND_BRACE expression N  RIGHT_ROUND_BRACE M  statement N  ELSE_KEYWORD M statement  
+statement ->selection_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+function_definition->declaration_specifiers declarator F compound_statement
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+parameter_declaration ->declaration_specifiers declarator 
+parameter_list ->parameter_declaration 
+parameter_type_list ->parameter_list 
+direct_declarator ->direct_declarator LEFT_ROUND_BRACE parameter_type_list RIGHT_ROUND_BRACE
+declarator -> direct_declarator
+n
+0xa0cef0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->equality_expression EQUAL_EQUAL relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+n
+0xa0cef0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->equality_expression EQUAL_EQUAL relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression ->logical_OR_expression LOGICAL_OR M logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+statement ->compound_statement
+n
+0xa0cef0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+fact
+0xa0cf90
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+n
+0xa0cef0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> additive_expression MINUS multiplicative_expression 
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> assignment_expression
+postfix_expression-> postfix_expression LEFT_ROUND_BRACE argument_expression_list RIGHT_ROUND_BRACE
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> multiplicative_expression MULTIPLICATION cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+primary_expression-> LEFT_ROUND_BRACE expression RIGHT_ROUND_BRACE 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+statement ->compound_statement
+selection_statement ->IF_KEYWORD LEFT_ROUND_BRACE expression N  RIGHT_ROUND_BRACE M  statement N  ELSE_KEYWORD M statement  
+statement ->selection_statement 
+block_item ->statement
+block_item_list ->block_item 
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+function_definition->declaration_specifiers declarator F compound_statement
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+direct_declarator -> direct_declarator LEFT_ROUND_BRACE RIGHT_ROUND_BRACE
+ declarator -> direct_declarator
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list->init_declarator_list COMMA init_declarator  
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+block_item ->declaration
+block_item_list ->block_item 
+type_specifier ->CHAR_KEYWORD 
+ declaration_specifiers -> type_specifier
+direct_declarator ->IDENTIFIER 
+declarator -> direct_declarator
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+block_item ->declaration
+block_item_list ->block_item_list M block_item  
+type_specifier ->INT_KEYWORD 
+ declaration_specifiers -> type_specifier
+pointer -> MULTIPLICATIONpointer -> MULTIPLICATION pointerdirect_declarator ->IDENTIFIER 
+declarator ->pointer direct_declarator 
+init_declarator->declarator
+init_declarator_list ->init_declarator 
+declaration -> declaration_specifiers init_declarator_list SEMICOLON_TERMINATOR
+block_item ->declaration
+block_item_list ->block_item_list M block_item  
+i
+0xa0e660
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+unary_operator-> MULTIPLICATION
+p
+0xa0e760
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+unary_expression-> unary_operator cast_expression 
+assignment_operator -> EQUAL
+unary_operator-> AMPERSAND
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+unary_expression-> unary_operator cast_expression 
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+unary_operator-> MULTIPLICATION
+unary_operator-> MULTIPLICATION
+p
+0xa0e760
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+unary_expression-> unary_operator cast_expression 
+cast_expression-> unary_expression
+unary_expression-> unary_operator cast_expression 
+assignment_operator -> EQUAL
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+i
+0xa0e660
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+squareplus
+0xa0cc50
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+i
+0xa0e660
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> assignment_expression
+postfix_expression-> postfix_expression LEFT_ROUND_BRACE argument_expression_list RIGHT_ROUND_BRACE
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->AND_expression AMPERSAND equality_expression 
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->inclusive_OR_expression BITWISE_OR exclusive_OR_expression
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+postfix_expression-> postfix_expression PLUS_PLUS 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+c
+0xa0e700
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> multiplicative_expression MULTIPLICATION cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+i
+0xa0e660
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+assignment_operator -> EQUAL
+fact
+0xa0cf90
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+d
+0xa0e6a0
+primary_expression-> IDENTIFIER 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+argument_expression_list-> assignment_expression
+postfix_expression-> postfix_expression LEFT_ROUND_BRACE argument_expression_list RIGHT_ROUND_BRACE
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+assignment_expression->unary_expression assignment_operator assignment_expression  
+expression ->assignment_expression 
+expression_statement -> expression  SEMICOLON_TERMINATOR  
+statement ->expression_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+constant-> INTEGER_CONSTANT 
+primary_expression-> constant 
+postfix_expression-> primary_expression 
+unary_expression-> postfix_expression
+cast_expression-> unary_expression
+multiplicative_expression-> cast_expression
+additive_expression-> multiplicative_expression
+shift_expression-> additive_expression
+relational_expression-> shift_expression 
+equality_expression->relational_expression
+AND_expression ->equality_expression
+exclusive_OR_expression ->AND_expression
+inclusive_OR_expression ->exclusive_OR_expression 
+logical_AND_expression ->inclusive_OR_expression  
+logical_OR_expression->logical_AND_expression 
+conditional_expression ->logical_OR_expression 
+assignment_expression ->conditional_expression 
+expression ->assignment_expression 
+jump_statement ->RETURN_KEYWORD expression SEMICOLON_TERMINATOR 
+statement ->jump_statement 
+block_item ->statement
+block_item_list ->block_item_list M block_item  
+compound_statement->LEFT_CURLY_BRACE block_item_list RIGHT_CURLY_BRACE 
+function_definition->declaration_specifiers declarator F compound_statement
+external_declaration ->function_definition
+translation_unit -> translation_unit external_declaration
+THIS IS THE END OF PARSING
+********************************************************************************************************************
+********************************************************************************************************************
+
+SYMBOL TABLES ARE AS FOLLOWS:
+GLOBAL SYMBOL TABLE : 
+----------------------
+|      NAME|      TYPE|      SIZE|    OFFSET|     VALUE|NESTED TABLE
+|      ----|      ----|      ----|    ------|  --------|------------
+|squareplus| function |         0|         0|       nil|squareplus SYMBOL TABLE
+
+|      plus| function |         0|         0|       nil|plus SYMBOL TABLE
+
+|      main| function |         0|         0|       nil|main SYMBOL TABLE
+
+|      fact| function |         0|         0|       nil|fact SYMBOL TABLE
+
+squareplus SYMBOL TABLE :  
+---------------------
+|      NAME|      TYPE|      SIZE|    OFFSET|     VALUE|NESTED TABLE
+|      ----|      ----|      ----|    ------|  --------|------------
+|         a|      int |         4|         0|       nil|       nil
+
+|    RETURN|      int |         4|         4|       nil|       nil
+
+|       ret|      int |         4|         8|       nil|       nil
+
+|      t000|      int |         4|        12|       nil|       nil
+
+|      t001|      int |         4|        16|       nil|       nil
+
+|      t002|      int |         4|        20|       nil|       nil
+
+|      t003|      int |         4|        24|       nil|       nil
+
+|      t004|      int |         4|        28|       nil|       nil
+
+plus SYMBOL TABLE :  
+---------------------
+|      NAME|      TYPE|      SIZE|    OFFSET|     VALUE|NESTED TABLE
+|      ----|      ----|      ----|    ------|  --------|------------
+|         i|      int |         4|         0|       nil|       nil
+
+|         j|      int |         4|         4|       nil|       nil
+
+|         k|      int |         4|         8|       nil|       nil
+
+|    RETURN|      int |         4|        12|       nil|       nil
+
+|      t005|      int |         4|        16|       nil|       nil
+
+|      t006|      int |         4|        20|       nil|       nil
+
+main SYMBOL TABLE :  
+---------------------
+|      NAME|      TYPE|      SIZE|    OFFSET|     VALUE|NESTED TABLE
+|      ----|      ----|      ----|    ------|  --------|------------
+|    RETURN|      int |         4|         0|       nil|       nil
+
+|         i|      int |         4|         4|       nil|       nil
+
+|         d|      int |         4|         8|       nil|       nil
+
+|         c|     char |         1|        12|       nil|       nil
+
+|         p|  pointer (pointer (int ))|         4|        13|       nil|       nil
+
+|      t014|      int |         4|        17|       nil|       nil
+
+|      t015|      int |         4|        21|       nil|       nil
+
+|      t016|      int |         4|        25|       nil|       nil
+
+|      t017|      int |         4|        29|       nil|       nil
+
+|      t018|      int |         4|        33|       nil|       nil
+
+|      t019|      int |         4|        37|       nil|       nil
+
+|      t020|      int |         4|        41|       nil|       nil
+
+|      t021|      int |         4|        45|       nil|       nil
+
+|      t022|      int |         4|        49|       nil|       nil
+
+|      t023|      int |         4|        53|       nil|       nil
+
+|      t024|      int |         4|        57|       nil|       nil
+
+|      t025|      int |         4|        61|       nil|       nil
+
+|      t026|      int |         4|        65|       nil|       nil
+
+|      t027|      int |         4|        69|       nil|       nil
+
+fact SYMBOL TABLE :  
+---------------------
+|      NAME|      TYPE|      SIZE|    OFFSET|     VALUE|NESTED TABLE
+|      ----|      ----|      ----|    ------|  --------|------------
+|         n|      int |         4|         0|       nil|       nil
+
+|    RETURN|      int |         4|         4|       nil|       nil
+
+|      t007|      int |         4|         8|       nil|       nil
+
+|      t008|      int |         4|        12|       nil|       nil
+
+|      t009|      int |         4|        16|       nil|       nil
+
+|      t010|      int |         4|        20|       nil|       nil
+
+|      t011|      int |         4|        24|       nil|       nil
+
+|      t012|      int |         4|        28|       nil|       nil
+
+|      t013|      int |         4|        32|       nil|       nil
+
+
+################################################################################################
+THREE ADDRESS CODE :
+------------------------------------------------------------------------------------------------------------------
+*************************************
+0 -> squareplus  - FUNCTION 
+*************************************
+1 -> t000 = a * a
+2 -> ret = t000
+3 -> t001 = 10
+4 -> t002 = 20
+5 -> param a
+6 -> param t001
+7 -> param t002
+8 -> t003 = call plus, 3
+9 -> t004 = ret + t003
+10 -> ret = t004
+11 -> return ret
+*************************************
+12 -> plus  - FUNCTION 
+*************************************
+13 -> if j > k goto 16
+14 -> goto 19
+15 -> goto 21
+16 -> t005 = i + j
+17 -> return t005
+18 -> goto ....
+19 -> t006 = i + k
+20 -> return t006
+*************************************
+21 -> fact  - FUNCTION 
+*************************************
+22 -> t007 = 0
+23 -> if n == t007 goto 29
+24 -> goto 25
+25 -> t008 = 1
+26 -> if n == t008 goto 29
+27 -> goto 32
+28 -> goto 38
+29 -> t009 = 1
+30 -> return t009
+31 -> goto ....
+32 -> t010 = 1
+33 -> t011 = n - t010
+34 -> param t011
+35 -> t012 = call fact, 1
+36 -> t013 = n * t012
+37 -> return t013
+*************************************
+38 -> main  - FUNCTION 
+*************************************
+39 -> t014 = 20
+40 -> i = t014
+41 -> t015 = & d
+42 -> *p = t015
+43 -> t016 = 50
+44 -> **p = t016
+45 -> param i
+46 -> t017 = call squareplus, 1
+47 -> i = t017
+48 -> t018 = 1
+49 -> t019 = d & t018
+50 -> t020 = 1
+51 -> t021 = t019 | t020
+52 -> d = t021
+53 -> t022 = d
+54 -> d = d + 1
+55 -> t023 = char_to_integer(c)
+56 -> t024 = d * t023
+57 -> d = t024
+58 -> t025 = 6
+59 -> d = t025
+60 -> param d
+61 -> t026 = call fact, 1
+62 -> i = t026
+63 -> t027 = 0
+64 -> return t027
